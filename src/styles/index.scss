@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --back-color: rgb(248, 248, 248);
+  --text-default: rgb(12, 12, 12);
+  --stronger-blue: rgb(0, 3, 39);
+  --bluish-tint: rgb(205, 209, 255);
+  --heading-color: rgb(32, 32, 32);
+
+  --h4: rgb(88, 88, 88);
+  --pink-bg: #f9d4ff;
+}
+
+.dark-theme {
+  --back-color: rgb(0, 0, 0);
+  --text-default: rgb(241, 241, 241);
+  --stronger-blue: rgb(205, 209, 255);
+  --bluish-tint: rgb(0, 3, 39);
+  --heading-color: rgb(255, 255, 255);
+
+  --h4: rgb(231, 231, 231);
+  --pink-bg: #480053;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading-color);
+}
+
+.app {
+  background-color: var(--back-color);
+  color: var(--text-default);
+  transition: all 0.3s ease-in-out;
+  min-height: 100vh;
+}
+
+.move-for-lib {
+  margin-left: 30%;
+}
+
+@import "./library";
+@import "./player";
+@import "./song";
+@import "./nav";

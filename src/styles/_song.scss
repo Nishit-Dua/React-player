@@ -1,0 +1,64 @@
+.song-container {
+  min-height: 60vh;
+  display: flex;
+  //   background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 20%;
+    border-radius: 50%;
+    // transition: all ;
+    user-select: none;
+  }
+
+  h2 {
+    padding: 3rem 1rem 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+.cover-active {
+  animation-name: rotate-image;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.cover-active-play {
+  animation-play-state: running;
+}
+
+.cover-active-pause {
+  animation-play-state: paused;
+}
+
+@keyframes rotate-image {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .song-container {
+    img {
+      width: 35%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .song-container {
+    img {
+      width: 50%;
+    }
+  }
+}

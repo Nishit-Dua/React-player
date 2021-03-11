@@ -1,0 +1,42 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 0;
+
+  * {
+    user-select: none;
+  }
+
+  h1 {
+    font-family: "Caveat", cursive;
+    font-size: 40px;
+  }
+
+  button {
+    background: var(--back-color);
+    // border-radius: 10px;
+    // outline: none;
+    border: 2px solid var(--stronger-blue);
+    color: var(--stronger-blue);
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-right: 1rem;
+
+    &:focus,
+    &:hover {
+      background: var(--stronger-blue);
+      color: var(--bluish-tint);
+      outline: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    .button-controls {
+      z-index: 100;
+    }
+  }
+}
