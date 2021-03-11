@@ -17,7 +17,8 @@ function App() {
   const audioRef = useRef(null);
 
   const handleSongChange = (song) => {
-    setSongs(
+    console.log(song.name);
+    setSongs((songs) =>
       songs.map((songItem) => {
         if (songItem.id === song.id) {
           return { ...songItem, active: true };
@@ -28,7 +29,7 @@ function App() {
     );
   };
 
-  const skiptrackHandeler = async (direction) => {
+  const skiptrackHandeler = async (direction, currentSong) => {
     const currentSongIndex = songs.findIndex(
       (songItem) => songItem.id === currentSong.id
     );
@@ -43,6 +44,7 @@ function App() {
       );
       if (isPlaying) audioRef.current.play();
     }
+    console.log(currentSong.name);
     handleSongChange(currentSong);
   };
 
@@ -88,7 +90,7 @@ function App() {
         songs={songs}
         currentSong={currentSong}
         setCurrentSong={setCurrentSong}
-        handleSongChange={handleSongChange}
+        // handleSongChange={handleSongChange}
         libraryStatus={libraryStatus}
         isPlaying={isPlaying}
       />

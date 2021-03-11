@@ -69,7 +69,7 @@ const Player = ({
           className="skip-back"
           icon={faAngleLeft}
           size="2x"
-          onClick={() => skiptrackHandeler("BACKWARD")}
+          onClick={() => skiptrackHandeler("BACKWARD", currentSong)}
         />
 
         <FontAwesomeIcon
@@ -83,13 +83,13 @@ const Player = ({
           className="skip-forwards"
           icon={faAngleRight}
           size="2x"
-          onClick={() => skiptrackHandeler("FORWARD")}
+          onClick={() => skiptrackHandeler("FORWARD", currentSong)}
         />
       </div>
       <audio
         onTimeUpdate={timeUpdateHandeler}
         onLoadedMetadata={timeUpdateHandeler}
-        onEnded={() => skiptrackHandeler("FORWARD")}
+        onEnded={() => skiptrackHandeler("FORWARD", currentSong)}
         src={audio}
         ref={audioRef}
       ></audio>
