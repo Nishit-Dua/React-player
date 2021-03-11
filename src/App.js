@@ -90,7 +90,7 @@ function App() {
         songs={songs}
         currentSong={currentSong}
         setCurrentSong={setCurrentSong}
-        // handleSongChange={handleSongChange}
+        handleSongChange={handleSongChange}
         libraryStatus={libraryStatus}
         isPlaying={isPlaying}
       />
