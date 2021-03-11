@@ -13,6 +13,13 @@ nav {
     font-size: 40px;
   }
 
+  .button-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
   button {
     background: var(--back-color);
     // border-radius: 10px;
@@ -35,6 +42,10 @@ nav {
 
 @media screen and (max-width: 768px) {
   nav {
+    h1 {
+      font-size: 30px;
+    }
+
     .button-controls {
       z-index: 100;
     }

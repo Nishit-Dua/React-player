@@ -8,7 +8,7 @@
   --back-color: rgb(248, 248, 248);
   --text-default: rgb(12, 12, 12);
   --stronger-blue: rgb(0, 3, 39);
-  --bluish-tint: rgb(205, 209, 255);
+  --bluish-tint: rgb(219, 222, 255);
   --heading-color: rgb(32, 32, 32);
 
   --h4: rgb(88, 88, 88);
@@ -16,14 +16,14 @@
 }
 
 .dark-theme {
-  --back-color: rgb(0, 0, 0);
+  --back-color: rgb(10, 10, 10);
   --text-default: rgb(241, 241, 241);
-  --stronger-blue: rgb(205, 209, 255);
+  --stronger-blue: rgb(219, 222, 255);
   --bluish-tint: rgb(0, 3, 39);
   --heading-color: rgb(255, 255, 255);
 
   --h4: rgb(231, 231, 231);
-  --pink-bg: #480053;
+  --pink-bg: #3d363f;
 }
 
 html {
