@@ -41,7 +41,6 @@ const Player = ({
         (e.target.currentTime / e.target.duration) * 100
       ),
     });
-    console.log(songInfo.animationPercentage);
   };
 
   const dragHandeler = (e) => {

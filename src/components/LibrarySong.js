@@ -1,15 +1,6 @@
-const LibrarySong = ({
-  song,
-  songs,
-  setCurrentSong,
-  currentSong,
-  handleSongChange,
-  audioRef,
-  isPlaying,
-}) => {
+const LibrarySong = ({ song, songs, setCurrentSong, audioRef, isPlaying }) => {
   const selectSongHandeler = async () => {
     const selectedSong = songs.filter((songItem) => song.id === songItem.id);
-    handleSongChange(song);
     await setCurrentSong(selectedSong[0]);
     if (isPlaying) audioRef.current.play();
   };

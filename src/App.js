@@ -1,5 +1,5 @@
 //Import Components
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Library from "./components/Library";
 import Nav from "./components/Nav";
 import Player from "./components/Player";
@@ -17,7 +17,6 @@ function App() {
   const audioRef = useRef(null);
 
   const handleSongChange = (song) => {
-    console.log(song.name);
     setSongs((songs) =>
       songs.map((songItem) => {
         if (songItem.id === song.id) {
@@ -28,6 +27,10 @@ function App() {
       })
     );
   };
+
+  useEffect(() => {
+    handleSongChange(currentSong);
+  }, [currentSong]);
 
   const skiptrackHandeler = async (direction, currentSong) => {
     const currentSongIndex = songs.findIndex(
@@ -44,8 +47,6 @@ function App() {
       );
       if (isPlaying) audioRef.current.play();
     }
-    console.log(currentSong.name);
-    handleSongChange(currentSong);
   };
 
   // useEffect(() => {
@@ -90,7 +91,6 @@ function App() {
         songs={songs}
         currentSong={currentSong}
         setCurrentSong={setCurrentSong}
-        handleSongChange={handleSongChange}
         libraryStatus={libraryStatus}
         isPlaying={isPlaying}
       />
