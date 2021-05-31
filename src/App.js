@@ -9,7 +9,7 @@ import data from "./data";
 
 function App() {
   const [songs, setSongs] = useState(data);
-  const [currentSong, setCurrentSong] = useState(songs[0]);
+  const [currentSong, setCurrentSong] = useState(songs[2]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [libraryStatus, setLibraryStatus] = useState(false);
   const [darkTheme, setDarkTheme] = useState(false);
@@ -48,23 +48,6 @@ function App() {
       if (isPlaying) audioRef.current.play();
     }
   };
-
-  // useEffect(() => {
-  //   setIsPlaying(false);
-  // }, [currentSong]);
-
-  // useEffect(() => {
-  //   const playPauseListener = window.addEventListener("keypress", (e) => {
-  //     if (e.key === " ") {
-  //       setIsPlaying(!isPlaying);
-  //       // if (isPlaying) audioRef.current.play();
-  //       // else audioRef.current.pause();
-  //     }
-  //   });
-  //   return () => {
-  //     window.removeEventListener("keypress", playPauseListener);
-  //   };
-  // }, []);
 
   return (
     <div

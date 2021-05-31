@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Nav = ({ setLibraryStatus, libraryStatus, setDarkTheme, darkTheme }) => {
   return (
     <nav>
-      <h1>Music Player</h1>
+      <h1>Musica 666</h1>
       <div className="button-controls">
         <button onClick={() => setLibraryStatus(!libraryStatus)}>
           Library
