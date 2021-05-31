@@ -39,6 +39,21 @@ html {
   background-color: var(--back-color);
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(13deg, #ea64ff 25%, #3f55ff 100%);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: inset 7px 10px 12px #f0f0f0;
+}
+
 h1,
 h2,
 h3 {
